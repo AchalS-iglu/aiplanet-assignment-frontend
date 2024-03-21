@@ -4,7 +4,7 @@ import NavBar from "./components/navbar";
 
 function App() {
     return (
-        <div className="max-h-screen">
+        <div className="flex flex-col h-screen">
             <NavBar />
             <MessageWindow />
         </div>
