@@ -27,10 +27,9 @@ function UploadPrompt() {
                         uploadPDF(file)
                             .then((res) => {
                                 resolve(res);
+                                setSelectedFile(file.name);
                             })
                             .catch((err) => reject(err));
-                        setSelectedFile(file.name);
-                        
                     }
                 };
                 input.click();
