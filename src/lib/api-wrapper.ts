@@ -4,7 +4,7 @@ export const API_URL = import.meta.env.API_URL || "https://chatpdf.achals.me";
 export const uploadPDF = async (file: File) => {
     const formdata = new FormData();
     formdata.append("file", file, file.name);
-    formdata.append("name", file.name);
+    formdata.append("name", file.name.slice(0, -4));
     fetch(`${API_URL}/pdf/upload`, {
         method: "POST",
         body: formdata,
