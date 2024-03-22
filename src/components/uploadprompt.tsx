@@ -27,7 +27,6 @@ function UploadPrompt() {
                         uploadPDF(file)
                             .then((res) => {
                                 resolve(res);
-                                setSelectedFile(file.name);
                                 setFileList([...fileList, file.name]);
                             })
                             .catch((err) => reject(err));
