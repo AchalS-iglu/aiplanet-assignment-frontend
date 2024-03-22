@@ -1,5 +1,3 @@
-import { DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_FORM_ACTIONS } from "react";
-
 // Get API URL from environment variable
 export const API_URL = import.meta.env.API_URL || "http://localhost:8000";
 
