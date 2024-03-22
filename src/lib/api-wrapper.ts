@@ -1,5 +1,5 @@
 // Get API URL from environment variable
-export const API_URL = import.meta.env.API_URL || "http://localhost:8000";
+export const API_URL = import.meta.env.API_URL || "https://chatpdf.achals.me";
 
 export const uploadPDF = async (file: File) => {
     const formdata = new FormData();

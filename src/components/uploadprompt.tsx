@@ -29,6 +29,8 @@ function UploadPrompt() {
                                 resolve(res);
                             })
                             .catch((err) => reject(err));
+                        setSelectedFile(file.name);
+                        
                     }
                 };
                 input.click();
