@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 function UploadPrompt() {
-    const { fileList, setSelectedFile } = useContext(FileContext);
+    const { fileList, setSelectedFile, setFileList } = useContext(FileContext);
 
     const handleClick = () => {
         toast.promise(
@@ -28,6 +28,7 @@ function UploadPrompt() {
                             .then((res) => {
                                 resolve(res);
                                 setSelectedFile(file.name);
+                                setFileList([...fileList, file.name]);
                             })
                             .catch((err) => reject(err));
                     }
