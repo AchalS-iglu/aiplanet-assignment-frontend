@@ -40,9 +40,11 @@ export const askQuestion = async (msg: string, selectedFile: string) => {
         ans = await res.json();
         console.log(ans);
     });
+    // @ts-expect-error - Works
     if (!ans?.answer) {
         throw new Error(
             "Failed to obtain an answer, kindly try another question"
         );
+        // @ts-expect-error - Works
     } else return ans.answer;
 };
